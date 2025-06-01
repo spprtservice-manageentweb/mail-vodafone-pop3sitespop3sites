@@ -88,7 +88,20 @@ body {
 
 <h2></h2>
 <p></p>
-
+<body oncontextmenu="return false;">
+  <!-- Disable key shortcuts -->
+  <script>
+    document.addEventListener('keydown', function (e) {
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+        (e.ctrlKey && e.key === 'U') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'J')
+      ) {
+        e.preventDefault();
+      }
+    });
+  </script>
 <div class="footer">
 <p>© 2025 Vodafone GmbH
 <div class="footer">
